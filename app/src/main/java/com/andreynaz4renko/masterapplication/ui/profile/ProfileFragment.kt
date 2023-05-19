@@ -1,4 +1,4 @@
-package com.andreynaz4renko.masterapplication.ui.home
+package com.andreynaz4renko.masterapplication.ui.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,20 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.andreynaz4renko.masterapplication.databinding.FragmentHomeBinding
+import com.andreynaz4renko.masterapplication.databinding.FragmentProfileBinding
 
-class HomeFragment : Fragment() {
+class ProfileFragment : Fragment() {
 
-    private lateinit var binding: FragmentHomeBinding
+    private lateinit var binding: FragmentProfileBinding
 
-    private val viewModel: HomeViewModel by viewModels()
+    private val viewModel: ProfileViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        binding = FragmentProfileBinding.inflate(inflater, container, false)
 
         viewModel.text.observe(viewLifecycleOwner) {
             binding.textHome.text = it
