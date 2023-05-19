@@ -7,7 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.andreynaz4renko.masterapplication.databinding.FragmentProfileBinding
+import com.bumptech.glide.Glide
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
@@ -21,9 +24,13 @@ class ProfileFragment : Fragment() {
     ): View {
         binding = FragmentProfileBinding.inflate(inflater, container, false)
 
-        viewModel.text.observe(viewLifecycleOwner) {
-            binding.textHome.text = it
+        viewModel.profileData.observe(viewLifecycleOwner) {
+            binding.nameView.text = it.name
+            // binding.emailView.text = it.email
+            Glide.with(this).load(it.avatar).into(binding.avatarView)
         }
+
+        viewModel.getProfileData()
 
         return binding.root
     }
