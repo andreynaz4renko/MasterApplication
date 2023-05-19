@@ -3,26 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_dashboard">
+    app:startDestination="@+id/navigationDashboard">
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigationDashboard"
         android:name="com.andreynaz4renko.masterapplication.ui.dashboard.DashboardFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_dashboard" >
         <action
-            android:id="@+id/action_navigation_dashboard_to_navigation_profile"
-            app:destination="@id/navigation_profile" />
+            android:id="@+id/navigateDashboardToProfile"
+            app:destination="@id/navigationProfile" />
     </fragment>
 
     <fragment
-        android:id="@+id/navigation_profile"
+        android:id="@+id/navigationProfile"
         android:name="com.andreynaz4renko.masterapplication.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" >
         <action
-            android:id="@+id/action_navigation_profile_to_navigation_dashboard"
-            app:destination="@id/navigation_dashboard" />
+            android:id="@+id/navigateProfileToDashboard"
+            app:destination="@id/navigationDashboard" />
     </fragment>
 
 </navigation>
