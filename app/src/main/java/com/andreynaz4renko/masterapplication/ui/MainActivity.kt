@@ -20,6 +20,10 @@ class MainActivity : AppCompatActivity() {
             binding.counterView.text = counter.toString()
         }
 
+        binding.counterView.setOnClickListener {
+            viewModel.clearCounter()
+        }
+
         binding.minusButton.setOnClickListener {
             viewModel.decreaseCounter()
         }

@@ -17,4 +17,8 @@ class MainViewModel : ViewModel() {
         _counter.value = counter.value?.minus(value)
     }
 
+    fun clearCounter() {
+        _counter.value = 0
+    }
+
 }
