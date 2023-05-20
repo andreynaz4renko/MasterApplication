@@ -1,13 +1,7 @@
 package com.andreynaz4renko.masterapplication.ui
 
 import android.os.Bundle
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.findNavController
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.andreynaz4renko.masterapplication.R
 import com.andreynaz4renko.masterapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +14,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.minusButton.setOnClickListener {
+
+        }
+
+        binding.plusButton.setOnClickListener {
+
+        }
 
     }
 }
