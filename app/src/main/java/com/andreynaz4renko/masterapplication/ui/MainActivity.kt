@@ -21,11 +21,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.minusButton.setOnClickListener {
-            viewModel.increaseCounter()
+            viewModel.decreaseCounter()
         }
 
         binding.plusButton.setOnClickListener {
-            viewModel.decreaseCounter()
+            viewModel.increaseCounter()
         }
 
         binding.minusButton.setOnLongClickListener {
