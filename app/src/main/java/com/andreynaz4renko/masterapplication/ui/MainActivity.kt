@@ -28,5 +28,15 @@ class MainActivity : AppCompatActivity() {
             viewModel.decreaseCounter()
         }
 
+        binding.minusButton.setOnLongClickListener {
+            viewModel.decreaseCounter(5)
+            true
+        }
+
+        binding.plusButton.setOnLongClickListener {
+            viewModel.increaseCounter(5)
+            true
+        }
+
     }
 }
