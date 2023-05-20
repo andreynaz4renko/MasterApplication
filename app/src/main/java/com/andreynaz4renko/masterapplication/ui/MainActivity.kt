@@ -17,15 +17,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         viewModel.counter.observe(this) { counter ->
-
+            binding.counterView.text = counter.toString()
         }
 
         binding.minusButton.setOnClickListener {
-
+            viewModel.increaseCounter()
         }
 
         binding.plusButton.setOnClickListener {
-
+            viewModel.decreaseCounter()
         }
 
     }
